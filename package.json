@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.2.3",
     "parcel": "^1.11.0",
     "cpx": "^1.5.0",
+    "rimraf": "^2.6.3",
     "ics-ie11-tools": "^1.0.9"
   }
 }
