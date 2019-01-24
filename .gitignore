@@ -1,0 +1,10 @@
+.DS_Store
+
+Icon
+
+# Thumbnails
+._*
+
+/.idea
+/.cache
+/node_modules/
