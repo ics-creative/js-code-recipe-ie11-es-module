@@ -1,6 +1,4 @@
-** 現在作成中のページです **
-
-# 19章269のコードをIE11向けに変換する方法
+# ESモジュールを使ったコードをIE11向けに変換する方法
 こちらは「[JavaScript コードレシピ集：｜技術評論社](https://gihyo.jp/book/2019/978-4-297-10368-2/support)」サポートページの一部です。
 
 ESモジュールを使ったコードを、Internet Explorer 11（以下、IE11）で動作させるための考え方や変換方法について紹介しています。書籍内では19章269においてESモジュールを使っていますので、その変換を通して解説します。
@@ -8,6 +6,23 @@ ESモジュールを使ったコードを、Internet Explorer 11（以下、IE11
 なお、IE11対応の基本的な考え方・新構文の対応方法・新機能の対応方法については以下のリポジトリをご使用ください。
 
 - [本書のサンプルコードをInternet Explorer 11で動作させるための手順](https://github.com/ics-creative/js-code-recipe-ie11)
+
+## ダウンロード
+サンプルファイルを一括でダウンロードする場合は次のURLを参照してください。
+
+https://github.com/ics-creative/js-code-recipe-ie11-es-module/archive/master.zip
+
+## フォルダー構成について
+
+本リポジトリーのサンプルコードは以下のフォルダー構成になっています。
+
+```
+js-code-recipe-ie11-es-modules
+　├ samples：変換対象のサンプルコード
+　└ transpiled_samples：IE11で動作するサンプルコード
+```
+
+※ `sample` フォルダーのサンプルコードは通常サンプルをベースにしていますが、IE11対応用に一部変更しています（後述）。
 
 ## ESモジュールのIE11向け変換の考え方
 
@@ -30,7 +45,7 @@ ESモジュールの構文については、Babelとポリフィルだけでは�
 ▼ Windowsでのフォルダーの移動のコマンド
 
 ```bash
-cd C:¥Users¥★★★js¥-code-recipe-ie11-es-module
+cd C:¥Users¥★★★js¥code-recipe-ie11-es-module
 ```
 
 ▼ macOSでのフォルダーの移動のコマンド
@@ -98,9 +113,8 @@ npm run build
 ### IE11で動作チェック
 IE11でも動作が確認しやすいように、次のURLで変換後のサンプルを公開しています。
 
-- [c19/269をIE11向けに変換したサンプル](https://ics-creative.github.io/js-code-recipe-ie11-es-module/www/c19/269/index.html)
+- [c19/269をIE11向けに変換したサンプル](https://ics-creative.github.io/js-code-recipe-ie11-es-module/transpiled_samples/c19/269/index.html)
 
 ▼ IE11で動作している様子
 
 ![IE11での動作](https://user-images.githubusercontent.com/7123759/51656025-adc5c480-1fe2-11e9-9d35-f188e0b952c2.png)
-

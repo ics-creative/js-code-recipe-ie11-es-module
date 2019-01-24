@@ -7,20 +7,23 @@
   "license": "",
   "config": {
     "src": "samples/c19/269",
+    "polyfill": "https://cdn.polyfill.io/v3/polyfill.js?features=default,es5,es6,es7,es8,es9,NodeList.prototype.forEach",
     "main_js_file": "main.js",
     "output": "transpiled_samples/c19/269"
   },
   "scripts": {
     "clean": "rimraf $npm_package_config_output",
     "copy": "cpx $npm_package_config_src'/**/**.!(js)' $npm_package_config_output",
-    "transpile": "parcel build $npm_package_config_src'/'$npm_package_config_main_js_file -d $npm_package_config_output --no-source-maps --no-minify",
-    "build": "npm run clean && npm run copy && npm run transpile"
+    "add-polyfill-meta": "addMetaAndPolyfill --src $npm_package_config_output --polyfill $npm_package_config_polyfill",
+    "transpile-js": "parcel build $npm_package_config_src'/'$npm_package_config_main_js_file -d $npm_package_config_output --no-source-maps --no-minify",
+    "build": "npm run clean && npm run copy &&  npm run add-polyfill-meta && npm run transpile-js"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "parcel": "^1.11.0",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "ics-ie11-tools": "^1.0.9"
   }
 }
