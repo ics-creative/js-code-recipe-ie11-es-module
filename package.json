@@ -1,14 +1,10 @@
 {
   "name": "js-code-recipe-ie11-es-module",
-  "version": "1.0.5",
-  "main": "index.js",
-  "repository": "https://ics-kano@github.com/ics-creative/js-code-recipe-ie11-es-module.git",
-  "author": "ics-kano <takeshi.kano@ics-web.jp>",
+  "version": "1.1.0",
   "homepage": "https://gihyo.jp/book/2019/978-4-297-10368-2",
-  "license": "",
   "config": {
     "src": "samples/c19/269",
-    "polyfill": "https://cdn.polyfill.io/v3/polyfill.js?features=default,es5,es6,es7,es8,es9,NodeList.prototype.forEach",
+    "polyfill": "https://polyfill-fastly.io/v3/polyfill.min.js",
     "main_js_file": "main.js",
     "output": "transpiled_samples/c19/269"
   },
